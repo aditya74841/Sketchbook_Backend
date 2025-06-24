@@ -15,7 +15,7 @@ const io = new Server(httpServer, { cors: "http://localhost:3000" });
 
 
 io.on("connection", (socket) => {
-  console.log("Server connected");
+  // console.log("Server connected");
 
   socket.on("beginPath", (arg) => {
     socket.broadcast.emit("beginPath", arg);
